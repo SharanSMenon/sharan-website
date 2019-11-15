@@ -6,7 +6,7 @@ const Post = ({ data: { prismicPost } }) => {
   const { data } = prismicPost
   return (
     <Layout>
-      <h1 style={{ fontSize: "3.5rem", marginBottom:"-10px" }}>{data.title.text}</h1>
+      <h1 style={{ fontSize: "3.5rem", marginBottom:"-22px" }}>{data.title.text}</h1>
       <p>By Sharan Sajiv Menon on {data.published}</p>
       <hr/>
       <div dangerouslySetInnerHTML={{ __html: data.content.html }}/>
