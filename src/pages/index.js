@@ -49,11 +49,11 @@ export default () => {
   const blogtags = Array.from(new Set(allTags))
 
   useEffect(() => {
-    let change = data.allPrismicPost.edges.filter(edge => edge.node.data.title.text.toLowerCase().includes(filterText));
+    let change = data.allPrismicPost.edges.filter(edge => edge.node.data.title.text.toLowerCase().includes(filterText.toLowerCase()));
     change = change.filter(edge => containsAll(edge.node.tags, filterTags))
     setPosts(change)
   }, [filterText, filterTags])
-  
+
   return (
     <Layout>
       <br></br>
