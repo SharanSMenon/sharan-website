@@ -11,6 +11,9 @@ const useStyles = makeStyles(theme => ({
   menuButton: {
     marginRight: theme.spacing(2),
   },
+  toolBar: {
+    background: "linear-gradient(45deg, #2196F3 30%, #21CBF3 90%)"
+  },
   title: {
     flexGrow: 1,
     color: "white",
@@ -18,6 +21,10 @@ const useStyles = makeStyles(theme => ({
   link: {
     color: "white",
     textDecoration: "none",
+    '&:hover': {
+      textDecoration: "none"
+    }
+
   },
 }))
 export const Header = () => {
@@ -25,7 +32,7 @@ export const Header = () => {
   return (
     <div>
       <AppBar position="static">
-        <Toolbar>
+        <Toolbar className={classes.toolBar}>
           <Link to="/" className={classes.link}>
             <Button>
               <Typography variant="h6" className={classes.title}>
